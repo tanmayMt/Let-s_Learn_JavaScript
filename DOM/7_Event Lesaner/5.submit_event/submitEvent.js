@@ -4,7 +4,8 @@ const name1 = form.querySelector("div #name");
 const email = form.querySelector("div #email");
 const password = form.querySelector("div #password");
 // console.log(name1.value);
-form.addEventListener("submit", formHandler);
+form.addEventListener("submit", formHandler);//Adds an event listener to the form. When the form is submitted, 
+                                             //the formHandler function is called.
 
 function formHandler(e) {
   e.preventDefault();
