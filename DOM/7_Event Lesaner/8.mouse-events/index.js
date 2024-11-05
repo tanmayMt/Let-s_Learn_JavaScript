@@ -46,6 +46,8 @@ const div = document.querySelector("div");
 div.addEventListener("mouseover", function () {
   console.log("mouseover is occured");
 });
+
+
 div.addEventListener("mousemove", function (e) {
   //console.log("mousemove is occured");
   console.log("clientX = " + e.clientX + ", clientY = " + e.clientY);
