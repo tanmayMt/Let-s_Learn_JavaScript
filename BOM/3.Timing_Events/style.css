@@ -1,0 +1,67 @@
+.save-btn {
+    /* Basic styling */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+
+    /* Background and text colors */
+    background-color: hwb(197 16% 18%);
+    /* Green */
+    color: purple;
+
+    /* Hover effect */
+    &:hover {
+        
+        background-color: hwb(101 18% 34%);
+        /* Darker green on hover */
+    }
+}
+
+.start-counting-btn {
+    /* Basic styling */
+    background-color: hsl(247, 51%, 41%);
+    /* Green */
+    border: none;
+    border-radius: 21px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+
+    /* Hover effect */
+    &:hover {
+        background-color: hsl(50, 58%, 43%);
+        /* Darker green on hover */
+    }
+}
+
+.start-clock-btn {
+    /* Basic styling */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30%;
+    /* Make the button circular */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+
+    /* Background and text color */
+    background-color: hsl(203, 42%, 40%);
+    /* Green */
+    color: white;
+
+    /* Hover effect */
+    &:hover {
+        color: rgb(26, 38, 170);
+        background-color: hwb(74 35% 21%);
+    }
+}
