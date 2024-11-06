@@ -7,11 +7,10 @@
 //   console.log("hi");
 // }, 3000);
 
-setTimeout(display, 2000);
-
 function display() {
   console.log("display function");
 }
 
-
+// setTimeout(display, 2000);
+setInterval(display, 2000);
 
