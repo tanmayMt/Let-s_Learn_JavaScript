@@ -33,9 +33,9 @@ function saveUser() {
 
 
 
-countClockButton=document.querySelector(".count-clock-btn");
+startCountingButton=document.querySelector(".start-counting-btn");
 const message2 = document.querySelector(".message2");
-countClockButton.addEventListener("click", displayCount);
+startCountingButton.addEventListener("click", displayCount);
 function displayCount() {
   let count = 1;
   message2.textContent = count;
@@ -46,30 +46,3 @@ function displayCount() {
   }, 1000);
 }
 
-
-
-////Dynamic Clock
-// saveButton.addEventListener("click", startClock);
-
-// function startClock() {
-//   let date = new Date();
-//   let hours = date.getHours();
-//   let minutes = date.getMinutes();
-//   let seconds = date.getSeconds();
-
-//   minutes = formatTime(minutes);
-//   seconds = formatTime(seconds);
-
-//   let time = hours + ":" + minutes + ":" + seconds;
-
-//   message.textContent = time;
-
-//   setInterval(startClock, 1000);
-// }
-
-// function formatTime(value) {
-//   if (value < 10) {
-//     value = "0" + value;
-//   }
-//   return value;
-// }
