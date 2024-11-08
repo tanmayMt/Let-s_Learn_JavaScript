@@ -1,4 +1,4 @@
-// Array methods
+// Array methods find() & findIndex()
 // find() returns the value of the first array element that passes certain condition
 let numbers = [5, 55, 30, 40, 50];
 
