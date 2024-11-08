@@ -2,7 +2,7 @@
 
 
 // Remember spread operator and rest parameter have same syntax (...) the three dots
-// spread operator unpack elements where rest parameters pack elements into an array
+// Spread Operator unpack elements where rest parameters pack elements into an array
 // example collected from MDN website
 function sum(x, y, z) {
     return x + y + z;
