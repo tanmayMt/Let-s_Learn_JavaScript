@@ -16,16 +16,23 @@ console.log("Welcome")
  })
 
 //Call Promise
-promise1.then((res)=>{
-    console.log(res)
- }).catch((error)=>{
-    console.log(error);
- });
+// promise1.then((res)=>{
+//     console.log(res)
+//  }).catch((error)=>{
+//     console.log(error);
+//  });
 
-promise2.then((res)=>{
-    console.log(res)
- }).catch((error)=>{
-    console.log(error);
- });
+// promise2.then((res)=>{
+//     console.log(res)
+//  }).catch((error)=>{
+//     console.log(error);
+//  });
 
- console.log('End'); 
+
+
+//Call All Promises
+Promise.all([promise1,promise2]).then((res)=>{
+   console.log(res)
+})
+
+console.log('End'); 
