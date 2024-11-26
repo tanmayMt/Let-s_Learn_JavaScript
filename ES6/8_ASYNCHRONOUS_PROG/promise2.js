@@ -31,8 +31,9 @@ console.log("Welcome")
 
 
 //Call All Promises
-Promise.all([promise1,promise2]).then((res)=>{
-   console.log(res)
+Promise.all([promise1,promise2]).then(([res1,res2])=>{ //Distructring response in Promise
+   console.log(res1);
+   console.log(res2);
 })
 
 console.log('End'); 
