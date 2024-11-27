@@ -26,10 +26,14 @@ console.clear();
 const getData = () =>{
     const xhr = new XMLHttpRequest(); // we can call API and sent those HTTP request(Like GET,POST,UPDATE,DELETE) to server.
     xhr.open('GET','https://jsonplaceholder.typicode.com/posts')// useing open() function we initialize the request
-    xhr.onload = ()=>{//using onload() event we will process the data
+    xhr.onload = ()=>{//using onload event we will process the data
         const data = xhr.response;
-        console.log(data);
-    } 
+        // console.log(data);
+        console.log(JSON.parse(data));
+    }
+    xhr.onerror = () =>{
+        console.log("Error is Occured!!")
+    }
     xhr.send(); //Sent the Http Request
 }
 getData();
