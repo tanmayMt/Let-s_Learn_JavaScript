@@ -36,8 +36,6 @@ const callAllTasks = async () => {
     console.log(t2);
     const t3 = await taskThree();
     console.log(t3);
-    const t4 = await taskFour();
-    console.log(t4);
   } catch (e) {
     console.log(e);
   }

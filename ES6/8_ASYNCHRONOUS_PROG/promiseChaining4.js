@@ -26,18 +26,18 @@ const taskThree = () =>{
 // taskOne().then((res)=>console.log(res))
 // .then(taskTwo).then((res)=>console.log(res))
 // .then(taskThree).then((res)=>console.log(res))
-// .catch((err)=>console.log(err));
+// .catch((err)=>console.log(er r));
 
 // Promise.all([taskOne, taskTwo]).then((res) => console.log(res));
-// Promise.all([taskOne, taskTwo]).then(([res1,res2]) =>{
-//     console.log(res1.name);
-//     console.log(res2);
-// }
-// );
-
-
-Promise.race([taskTwo, taskThree]).then((result) =>
-  console.log(result)
+Promise.all([taskOne, taskTwo]).then(([res1,res2]) =>{
+    console.log(res1);
+    console.log(res2);
+}
 );
+
+
+// Promise.race([taskTwo, taskThree]).then((result) =>
+//   console.log(result)
+// );
 
 console.log("ending the program");
