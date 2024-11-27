@@ -42,7 +42,7 @@ const makeRequest = (method,url,data)=>{
 const getData = () =>{
     makeRequest('GET','https://jsonplaceholder.typicode.com/posts');
 }
-getData();
+// getData();
 
 const sentData = () =>{
     makeRequest('POST','https://jsonplaceholder.typicode.com/posts',{
@@ -51,4 +51,15 @@ const sentData = () =>{
         userId: 1,
     });
 }
-sentData()
+// sentData()
+
+const updateData = () => {
+    makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
+        id: 1,
+        title: 'New_Update',
+        body: 'bar_Update',
+        userId: 1,
+    });
+}
+updateData()
+
