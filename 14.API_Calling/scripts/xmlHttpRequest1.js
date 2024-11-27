@@ -22,10 +22,12 @@ console.clear();
 
 //console.log(window) //It is a Build-in Browser Object
 
-
-const getData = () =>{
+const makeRequest = (method,url,data)=>{
     const xhr = new XMLHttpRequest(); // we can call API and sent those HTTP request(Like GET,POST,UPDATE,DELETE) to server.
-    xhr.open('GET','https://jsonplaceholder.typicode.com/posts')// useing open() function we initialize the request
+    xhr.open(method,url)// useing open() function we initialize the request
+    
+    xhr.setRequestHeader('Content-Type', 'application/json'); //setRequestHeader() function is used to specify that the Request should be in json Formate
+
     xhr.onload = ()=>{//using onload event we will process the data
         const data = xhr.response;
         // console.log(data);
@@ -34,6 +36,19 @@ const getData = () =>{
     xhr.onerror = () =>{
         console.log("Error is Occured!!")
     }
-    xhr.send(); //Sent the Http Request
+    xhr.send(JSON.stringify(data)); //Sent the Http Request
+}
+
+const getData = () =>{
+    makeRequest('GET','https://jsonplaceholder.typicode.com/posts');
 }
 getData();
+
+const sentData = () =>{
+    makeRequest('POST','https://jsonplaceholder.typicode.com/posts',{
+        title: 'new',
+        body: 'bar',
+        userId: 1,
+    });
+}
+sentData()
