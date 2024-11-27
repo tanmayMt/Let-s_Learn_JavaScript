@@ -1,0 +1,35 @@
+// From the front-end if we want to get/fetch any data, or delete any data or edit data of databse. But The database is handel by server(Backend Language -> java,c++ etc).
+
+// To get the database data, we have to call server from Frontend.
+// So Actually From the Frontend we want to sent request(Like GET,POST,UPDATE,DELETE) to the Server to access data. So we need a "API" link to sent those request to server.
+
+// In Server the API is created to make the connection/relation between Frontend & Backend.
+
+// So, API is a kind of Llink url through which we can create a conection between Frontend & Server and sent request(Like GET,POST,UPDATE,DELETE) to the Server.
+
+// \*There are mainly 4 Process to calling API:
+
+// 1.  XMLHttp Request
+// 2.  Fetch API
+// 3.  axios <- javascript Libarey
+// 4.  Jquery
+
+console.clear();
+
+// event - onload(), onerror()
+// property - response, responseText, responseType, responseURL, status, statusText
+// function - open(), send(), setRequestHeader()
+
+//console.log(window) //It is a Build-in Browser Object
+
+
+const getData = () =>{
+    const xhr = new XMLHttpRequest(); // we can call API and sent those HTTP request(Like GET,POST,UPDATE,DELETE) to server.
+    xhr.open('GET','https://jsonplaceholder.typicode.com/posts')// useing open() function we initialize the request
+    xhr.onload = ()=>{//using onload() event we will process the data
+        const data = xhr.response;
+        console.log(data);
+    } 
+    xhr.send(); //Sent the Http Request
+}
+getData();
