@@ -11,7 +11,7 @@ const taskTwo = () =>{
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             resolve("Task 2 is Completed");
-            //reject("Task 2 is not Completed");  //If one reject is called the next task will not beexecuted
+           // reject("Task 2 is not Completed");  //If one reject is called the next task will not beexecuted
         },5000)
     })
 }
@@ -36,7 +36,8 @@ const callAllTasks = async () => {
     console.log(t2);
     const t3 = await taskThree();
     console.log(t3);
-  } catch (e) {
+  }
+   catch (e) {
     console.log(e);
   }
 };
