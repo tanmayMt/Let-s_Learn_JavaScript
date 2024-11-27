@@ -11,7 +11,7 @@ const taskTwo = () =>{
     return new Promise((resolve, reject)=>{
         setTimeout(()=>{
             // resolve("Task 2 is Completed");
-            reject("Task 2 is not Completed");
+            reject("Task 2 is not Completed");  //If one reject is called the next task will not beexecuted
         },3000)
     })
 }
