@@ -31,6 +31,9 @@ const makeRequest = (method,url,data)=>{
     xhr.onload = ()=>{//using onload event we will process the data
         const data = xhr.response;
         // console.log(data);
+        console.log("xhr.status: "+xhr.status);
+        console.log(`xhr.statusText: ${xhr.statusText}`);
+        console.log(`JSON.parse(data): ${JSON.parse(data)}`);
         console.log(JSON.parse(data));
     }
     xhr.onerror = () =>{
@@ -51,7 +54,7 @@ const sentData = () =>{
         userId: 1,
     });
 }
-// sentData()
+sentData()
 
 const updateData = () => {
     makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
@@ -75,4 +78,4 @@ const updateSingleData = () => {
 const deleteData = () => {
     makeRequest('DELETE', 'https://jsonplaceholder.typicode.com/posts/1');
 }
-deleteData();
+// deleteData();
