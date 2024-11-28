@@ -21,3 +21,15 @@ localStorage.setItem("password", "0123456789");
 const userName = localStorage.getItem("userName");
 const userPassword = localStorage.getItem("password");
 console.log(userName, userPassword);
+
+
+// setItem(key, value)
+const countries = ["Australia", "Bangladesh", "Nepal"];
+localStorage.setItem("countries", JSON.stringify(countries));
+
+// getItem(key)
+const countriesList = JSON.parse(localStorage.getItem("countries"));
+console.log(countriesList);
+//localStorage.clear();
+
+
