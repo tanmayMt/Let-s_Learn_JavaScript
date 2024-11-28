@@ -32,10 +32,15 @@ const countriesList = JSON.parse(localStorage.getItem("countries"));
 console.log(countriesList);
 localStorage.clear();
 
+
+//
 const obj = {
     name :"Roni",
     age:23
 }
 
 localStorage.setItem("students",JSON.stringify(obj));
-obj=localStorage.getItem(students);
+const obj1=JSON.parse(localStorage.getItem(students));
+console.log(obj1);
+
+localStorage.clear();
