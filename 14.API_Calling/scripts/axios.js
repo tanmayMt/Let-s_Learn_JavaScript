@@ -78,4 +78,14 @@ const updateData = ()=>{
   .catch((err)=>console.log(err))
 
 }
-updateData()
+// updateData()
+
+const deleteData = () => {
+  makeRequest({
+    url: "https://jsonplaceholder.typicode.com/posts/1",
+    method: "delete",
+  })
+    .then((res) => console.log(res.data))
+    .catch((err) => console.log(err));
+};
+deleteData();
