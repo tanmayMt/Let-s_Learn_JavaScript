@@ -34,11 +34,19 @@ const makeRequest = async (config) => {
 // .catch((error)=>console.log(error))
 
 const getData = () => {
-  makeRequest("https://jsonplaceholder.typicode.com/posts")
-    .then((res) => console.log(res))
+  makeRequest("https://jsonplaceholder.typicode.com/posts/1")
+    .then((res) => {
+     // console.log(res.data);
+     const d ={
+      id: res.data.id,
+      title: res.data.title,
+      body: res.data.body
+     }
+     console.log(d)
+    })
     .catch((err) => console.log(err));
 };
-// getData();
+getData();
 
 const createData = () => {
   makeRequest({
@@ -50,7 +58,7 @@ const createData = () => {
       userId: 1,
     }),
   })
-    .then((res) => console.log(res))
+    .then((res) => console.log(res.data))
     .catch((err) => console.log(err));
 };
-createData();
+// createData();
