@@ -30,6 +30,12 @@ localStorage.setItem("countries", JSON.stringify(countries));
 // getItem(key)
 const countriesList = JSON.parse(localStorage.getItem("countries"));
 console.log(countriesList);
-//localStorage.clear();
+localStorage.clear();
 
+const obj = {
+    name :"Roni",
+    age:23
+}
 
+localStorage.setItem("students",JSON.stringify(obj));
+obj=localStorage.getItem(students);
