@@ -22,7 +22,7 @@
 console.clear();
 // console.log(window);
 
-axios.get("https://jsonplaceholder.typicode.com/posts/101")
+axios.get("https://jsonplaceholder.typicode.com/posts/101") 
 .then((res)=>{
     // console.log(res);
     console.log(res.data);
