@@ -22,9 +22,20 @@
 console.clear();
 // console.log(window);
 
-axios.get("https://jsonplaceholder.typicode.com/posts/101") 
-.then((res)=>{
-    // console.log(res);
-    console.log(res.data);
-})
-.catch((error)=>console.log(error))
+const makeRequest = async (config) => {
+  return await axios(config);
+};
+
+// axios.get("https://jsonplaceholder.typicode.com/posts/101") 
+// .then((res)=>{
+//     // console.log(res);
+//     console.log(res.data);
+// })
+// .catch((error)=>console.log(error))
+
+const getData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts")
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+};
+getData();
